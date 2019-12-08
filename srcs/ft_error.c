@@ -6,24 +6,11 @@
 /*   By: cwitting <cwitting@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 04:17:49 by cwitting          #+#    #+#             */
-/*   Updated: 2019/12/08 03:53:06 by cwitting         ###   ########.fr       */
+/*   Updated: 2019/12/08 06:36:59 by cwitting         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
-static void		clean_one_stack(t_lst *head, size_t size)
-{
-	if (size)
-	{
-		clean_one_stack(head->next, size - 1);
-		if (head)
-		{
-			free(head);
-			head = NULL;
-		}
-	}
-}
 
 int				ft_error_and_free(t_lst *head, t_args *args)
 {

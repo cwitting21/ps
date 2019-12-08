@@ -6,7 +6,7 @@
 /*   By: cwitting <cwitting@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 22:38:38 by cwitting          #+#    #+#             */
-/*   Updated: 2019/12/08 02:08:57 by cwitting         ###   ########.fr       */
+/*   Updated: 2019/12/08 07:40:30 by cwitting         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ int					rrr(t_lst **head_a, t_lst **head_b);
 int					stack_is_sorted(t_lst **head_a, t_lst **head_b);
 int					get_next_line(const int fd, char **line);
 int					init_args(t_args *args, size_t size);
-int					read_commands(t_lst **head_a, t_lst **head_b);
+int					read_commands(t_lst **head_a, t_lst **head_b, t_args *args);
 int					args_to_array(t_lst **head, t_args *args);
 int					list_is_sorted(t_lst *head);
 int					get_insert_index(t_lst **head_a, int num);
@@ -114,6 +114,8 @@ void				case_4_simpsort(t_lst **head_a, t_lst **head_b,
 void				sort_2(t_lst **head);
 void				print_stacks(t_lst **head_a, t_lst **head_b);
 void				init_args_read_cmd(char **line, int *tmp, int *error);
+void				clean_one_stack(t_lst *head, size_t size);
+void				null_args(t_stack *stack);
 t_lst				*new_lst(int value);
 t_lst				*push_lst_to_end(t_lst *head, t_lst *new);
 t_bool				array_is_sorted(int *arr);

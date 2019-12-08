@@ -6,24 +6,11 @@
 /*   By: cwitting <cwitting@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 04:28:06 by cwitting          #+#    #+#             */
-/*   Updated: 2019/12/07 22:46:45 by cwitting         ###   ########.fr       */
+/*   Updated: 2019/12/08 06:36:46 by cwitting         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
-static void		clean_one_stack(t_lst *head, size_t size)
-{
-	if (size)
-	{
-		clean_one_stack(head->next, size - 1);
-		if (head)
-		{
-			head = NULL;
-			free(head);
-		}
-	}
-}
 
 static int		is_smallest(t_lst **head_a, int val)
 {

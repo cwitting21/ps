@@ -6,11 +6,17 @@
 /*   By: cwitting <cwitting@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 20:37:20 by cwitting          #+#    #+#             */
-/*   Updated: 2019/12/08 02:09:49 by cwitting         ###   ########.fr       */
+/*   Updated: 2019/12/08 07:40:15 by cwitting         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+void		null_args(t_stack *stack)
+{
+	stack->a = NULL;
+	stack->b = NULL;
+}
 
 int			args_have_no_digits(int ac, char **av)
 {

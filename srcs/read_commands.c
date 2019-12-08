@@ -6,7 +6,7 @@
 /*   By: cwitting <cwitting@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 04:15:52 by cwitting          #+#    #+#             */
-/*   Updated: 2019/12/08 05:10:01 by cwitting         ###   ########.fr       */
+/*   Updated: 2019/12/08 08:35:58 by cwitting         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ static int		case_3_local(t_lst **head_a, t_lst **head_b, char *line)
 	return (1);
 }
 
-int				read_commands(t_lst **head_a, t_lst **head_b)
+int				read_commands(t_lst **head_a, t_lst **head_b, t_args *args)
 {
 	char		*line;
 	int			tmp;
@@ -107,11 +107,30 @@ int				read_commands(t_lst **head_a, t_lst **head_b)
 		case_2_local(head_a, head_b, line);
 		error = case_3_local(head_a, head_b, line);
 		if (error == 0)
+		{
+			if (*head_a && (*head_a)->size)
+				clean_one_stack(*head_a, (*head_a)->size);
+			if (*head_b && (*head_b)->size)
+				clean_one_stack(*head_b, (*head_b)->size);
+			if (args)
+			{
+				if (args->arr)
+				{
+					free(args->arr);
+					args->arr = NULL;
+				}
+				free(args);
+				args = NULL;
+			}
 			exit(EXIT_FAILURE);
+		}
 	}
 	ft_strdel(&line);
 	if (tmp == -1)
+	{
+		ft_strdel(&line);
 		return (0);
+	}
 	if (get_next_line(0, &line) == 0)
 		return (str_del_and_ret_1(&line));
 	ft_strdel(&line);

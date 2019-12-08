@@ -6,15 +6,15 @@
 /*   By: cwitting <cwitting@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 04:25:30 by cwitting          #+#    #+#             */
-/*   Updated: 2019/12/07 22:39:29 by cwitting         ###   ########.fr       */
+/*   Updated: 2019/12/08 06:48:36 by cwitting         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-static void		clean_one_stack(t_lst *head, size_t size)
+void		clean_one_stack(t_lst *head, size_t size)
 {
-	if (size)
+	if (size && head)
 	{
 		clean_one_stack(head->next, size - 1);
 		if (head)

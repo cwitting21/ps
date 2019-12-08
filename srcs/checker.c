@@ -6,88 +6,81 @@
 /*   By: cwitting <cwitting@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 04:42:58 by cwitting          #+#    #+#             */
-/*   Updated: 2019/12/08 05:13:58 by cwitting         ###   ########.fr       */
+/*   Updated: 2019/12/08 07:55:32 by cwitting         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-static void		clean_one_stack(t_lst *head, size_t size)
-{
-	if (size)
-	{
-		clean_one_stack(head->next, size - 1);
-		if (head)
-		{
-			free(head);
-			head = NULL;
-		}
-	}
-}
-
 static void		clean_local(t_lst *h_a, t_lst *h_b, t_args *args)
 {
-	if (args->arr)
-		free(args->arr);
-	if (h_a)
+	if (args)
+	{
+		if (args->arr)
+		{
+			free(args->arr);
+			args->arr = NULL;
+		}
+		free(args);
+		args = NULL;
+	}
+	if (h_a && h_a->size)
 		clean_one_stack(h_a, h_a->size);
-	if (h_b)
+	if (h_b && h_b->size)
 		clean_one_stack(h_b, h_b->size);
+}
+
+static int		case1_local(t_args *args, t_lst **h)
+{
+	if (*h && (*h)->size)
+		clean_one_stack(*h, (*h)->size);
+	if (args)
+	{
+		free(args);
+		args = NULL;
+	}
+	return (ft_error());
+}
+
+static int		case2_local(t_args *args, t_lst **h)
+{
+	if (*h && (*h)->size)
+		clean_one_stack(*h, (*h)->size);
+	if (args)
+	{
+		if (args->arr)
+		{
+			free(args->arr);
+			args->arr = NULL;
+		}
+		free(args);
+		args = NULL;
+	}
+	return (ft_error());
 }
 
 int				main(int ac, char **av)
 {
-	t_lst		*head;
-	t_stack		stack;
+	t_stack		s;
 	t_args		*args;
 	int			ret;
 
-	stack.a = NULL;
-	stack.b = NULL;
-	head = NULL;
+	null_args(&s);
 	ret = 1;
 	args = (t_args*)malloc(sizeof(t_args));
-	// args = NULL;
 	if (ac > 1)
 	{
-		if (!(args_to_lst(ac, av, &stack.a)))
-		{
-			if (stack.a && stack.a->size)
-				clean_one_stack(stack.a, stack.a->size);
-			if (args)
-				free(args);
-			return (ft_error());
-		}
-		if (!(init_args(args, stack.a->size)))
-		{
-			if (stack.a && stack.a->size)
-				clean_one_stack(stack.a, stack.a->size);
-			if (args->arr)
-				free(args->arr);
-			if (args)
-				free(args);
-			return (ft_error());
-		}
-		if (!(args_to_array(&stack.a, args)))
-		{
-			if (stack.a)
-				clean_one_stack(stack.a, stack.a->size);
-			if (args->arr)
-				free(args->arr);
-			if (args)
-				free(args);
-		}
-		// if (!(args_to_lst(ac, av, &head)) || !(init_args(args, head->size)) ||
-		// !(args_to_array(&head, args)))
-		// 	return (ft_error_and_free(head, args));
-		// stack.a = head;
-		ret = read_commands(&stack.a, &stack.b);
-		if ((stack_is_sorted(&stack.a, &stack.b) || stack.a->size == 1)
+		if (!(args_to_lst(ac, av, &s.a)))
+			return (case1_local(args, &s.a));
+		if (!(init_args(args, s.a->size)) || !(args_to_array(&s.a, args)))
+			return (case2_local(args, &s.a));
+		ret = read_commands(&s.a, &s.b, args);
+		if ((stack_is_sorted(&s.a, &s.b) || s.a->size == 1)
 		&& ret != 0)
 			ft_printf("OK\n");
-		else if (!stack_is_sorted(&stack.a, &stack.b) && ret != 0)
+		else if (!stack_is_sorted(&s.a, &s.b) && ret != 0)
 			ft_printf("KO\n");
-		clean_local(stack.a, stack.b, args);
+		clean_local(s.a, s.b, args);
 	}
 	exit(EXIT_SUCCESS);
 }
