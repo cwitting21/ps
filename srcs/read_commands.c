@@ -6,7 +6,7 @@
 /*   By: cwitting <cwitting@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 04:15:52 by cwitting          #+#    #+#             */
-/*   Updated: 2019/12/08 10:35:29 by cwitting         ###   ########.fr       */
+/*   Updated: 2019/12/08 10:50:37 by cwitting         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,10 +114,7 @@ int				read_commands(t_lst **head_a, t_lst **head_b, t_args *args)
 	}
 	ft_strdel(&line);
 	if (tmp == -1)
-	{
-		// ft_strdel(&line);
 		return (0);
-	}
 	if (get_next_line(0, &line) == 0)
 		return (str_del_and_ret_1(&line));
 	ft_strdel(&line);
