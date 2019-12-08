@@ -6,29 +6,11 @@
 /*   By: cwitting <cwitting@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 04:42:58 by cwitting          #+#    #+#             */
-/*   Updated: 2019/12/08 07:55:32 by cwitting         ###   ########.fr       */
+/*   Updated: 2019/12/08 10:28:41 by cwitting         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
-static void		clean_local(t_lst *h_a, t_lst *h_b, t_args *args)
-{
-	if (args)
-	{
-		if (args->arr)
-		{
-			free(args->arr);
-			args->arr = NULL;
-		}
-		free(args);
-		args = NULL;
-	}
-	if (h_a && h_a->size)
-		clean_one_stack(h_a, h_a->size);
-	if (h_b && h_b->size)
-		clean_one_stack(h_b, h_b->size);
-}
 
 static int		case1_local(t_args *args, t_lst **h)
 {
@@ -80,7 +62,7 @@ int				main(int ac, char **av)
 			ft_printf("OK\n");
 		else if (!stack_is_sorted(&s.a, &s.b) && ret != 0)
 			ft_printf("KO\n");
-		clean_local(s.a, s.b, args);
+		clean_checker(s.a, s.b, args);
 	}
 	exit(EXIT_SUCCESS);
 }

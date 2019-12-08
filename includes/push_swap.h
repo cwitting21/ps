@@ -6,7 +6,7 @@
 /*   By: cwitting <cwitting@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 22:38:38 by cwitting          #+#    #+#             */
-/*   Updated: 2019/12/08 07:40:30 by cwitting         ###   ########.fr       */
+/*   Updated: 2019/12/08 10:33:23 by cwitting         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,9 @@ void				print_stacks(t_lst **head_a, t_lst **head_b);
 void				init_args_read_cmd(char **line, int *tmp, int *error);
 void				clean_one_stack(t_lst *head, size_t size);
 void				null_args(t_stack *stack);
+void				clean_checker(t_lst *h_a, t_lst *h_b, t_args *args);
+void				clean_push_swap(t_args *args);
+void				clean_read_cmd(t_lst **head_a, t_lst **head_b, t_args *args);
 t_lst				*new_lst(int value);
 t_lst				*push_lst_to_end(t_lst *head, t_lst *new);
 t_bool				array_is_sorted(int *arr);

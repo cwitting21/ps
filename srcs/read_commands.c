@@ -6,7 +6,7 @@
 /*   By: cwitting <cwitting@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 04:15:52 by cwitting          #+#    #+#             */
-/*   Updated: 2019/12/08 08:35:58 by cwitting         ###   ########.fr       */
+/*   Updated: 2019/12/08 10:35:29 by cwitting         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,27 +108,14 @@ int				read_commands(t_lst **head_a, t_lst **head_b, t_args *args)
 		error = case_3_local(head_a, head_b, line);
 		if (error == 0)
 		{
-			if (*head_a && (*head_a)->size)
-				clean_one_stack(*head_a, (*head_a)->size);
-			if (*head_b && (*head_b)->size)
-				clean_one_stack(*head_b, (*head_b)->size);
-			if (args)
-			{
-				if (args->arr)
-				{
-					free(args->arr);
-					args->arr = NULL;
-				}
-				free(args);
-				args = NULL;
-			}
+			clean_read_cmd(head_a, head_b, args);
 			exit(EXIT_FAILURE);
 		}
 	}
 	ft_strdel(&line);
 	if (tmp == -1)
 	{
-		ft_strdel(&line);
+		// ft_strdel(&line);
 		return (0);
 	}
 	if (get_next_line(0, &line) == 0)
