@@ -1,0 +1,25 @@
+==35955== Memcheck, a memory error detector
+==35955== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==35955== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==35955== Command: ./checker -80 -61 -4 -16 -65 -27 -28 -71 -36 -81 -52 -100 -64 -86 -49 -98 -50 -12 -72 -75 -40 -94 -76 -32 0 -59 -97 -57 -15 -78 -92 -19 -13 -62 -51 -5 -29 -44 -41 -2 -99 -9 -14 -42 -66 -21 -31 -38 -85 -88 -82 -30 -90 -7 -73 -23 -34 -26 -79 -96 -67 -43 -55 -83 -10 -3 -95 -46 -60 -8 -17 -93 -35 -54 -77 -74 -48 -20 -18 -63 -39 -25 -58 -22 -70 -1 -6 -33 -84 -68 -11 -69 -89 -56 -91 -37 -45 -53 -87 -47 -24
+==35955== 
+==35955== 
+==35955== Process terminating with default action of signal 2 (SIGINT)
+==35955==    at 0x100004EC2: push_lst_to_end (in ./checker)
+==35955==    by 0x1000014FC: args_to_lst (in ./checker)
+==35955==    by 0x1000010B2: main (in ./checker)
+==35955== 
+==35955== HEAP SUMMARY:
+==35955==     in use at exit: 21,160 bytes in 256 blocks
+==35955==   total heap usage: 272 allocs, 16 frees, 27,304 bytes allocated
+==35955== 
+==35955== LEAK SUMMARY:
+==35955==    definitely lost: 0 bytes in 0 blocks
+==35955==    indirectly lost: 0 bytes in 0 blocks
+==35955==      possibly lost: 72 bytes in 3 blocks
+==35955==    still reachable: 3,352 bytes in 104 blocks
+==35955==         suppressed: 17,736 bytes in 149 blocks
+==35955== Rerun with --leak-check=full to see details of leaked memory
+==35955== 
+==35955== For lists of detected and suppressed errors, rerun with: -s
+==35955== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 4 from 4)

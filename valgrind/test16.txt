@@ -1,0 +1,28 @@
+==35924== Memcheck, a memory error detector
+==35924== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==35924== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==35924== Command: ./checker -48 -18 -41 -3 -19 -4 -79 -14 -99 -96 -87 -20 -26 0 -12 -33 -71 -34 -78 -52 -51 -16 -74 -5 -11 -32 -6 -56 -45 -81 -89 -57 -97 -2 -86 -55 -100 -30 -68 -98 -75 -83 -95 -85 -65 -60 -8 -94 -47 -1 -7 -35 -13 -36 -53 -77 -15 -80 -40 -21 -54 -90 -9 -64 -29 -69 -17 -92 -58 -72 -59 -82 -88 -24 -44 -91 -61 -49 -62 -93 -66 -28 -23 -27 -31 -50 -76 -42 -46 -73 -38 -37 -22 -25 -67 -63 -84 -70 -39 -10 -43
+==35924== 
+==35924== 
+==35924== Process terminating with default action of signal 2 (SIGINT)
+==35924==    at 0x25805895F: ???
+==35924==    by 0x10002E68E: dyld::loadPhase4(char const*, char const*, dyld::LoadContext const&, unsigned int&, std::__1::vector<char const*, std::__1::allocator<char const*> >*) (in /usr/lib/dyld)
+==35924==    by 0x10002E3FE: dyld::loadPhase3(char const*, char const*, dyld::LoadContext const&, unsigned int&, std::__1::vector<char const*, std::__1::allocator<char const*> >*) (in /usr/lib/dyld)
+==35924==    by 0x10002DB82: dyld::loadPhase1(char const*, char const*, dyld::LoadContext const&, unsigned int&, std::__1::vector<char const*, std::__1::allocator<char const*> >*) (in /usr/lib/dyld)
+==35924==    by 0x1000288FE: dyld::loadPhase0(char const*, char const*, dyld::LoadContext const&, unsigned int&, std::__1::vector<char const*, std::__1::allocator<char const*> >*) (in /usr/lib/dyld)
+==35924==    by 0x100028530: dyld::load(char const*, dyld::LoadContext const&, unsigned int&) (in /usr/lib/dyld)
+==35924==    by 0x10002EFEF: dyld::libraryLocator(char const*, bool, char const*, ImageLoader::RPathChain const*, unsigned int&) (in /usr/lib/dyld)
+==35924==    by 0x100035A45: ImageLoader::recursiveLoadLibraries(ImageLoader::LinkContext const&, bool, ImageLoader::RPathChain const&, char const*) (in /usr/lib/dyld)
+==35924==    by 0x100035C15: ImageLoader::recursiveLoadLibraries(ImageLoader::LinkContext const&, bool, ImageLoader::RPathChain const&, char const*) (in /usr/lib/dyld)
+==35924==    by 0x100035C15: ImageLoader::recursiveLoadLibraries(ImageLoader::LinkContext const&, bool, ImageLoader::RPathChain const&, char const*) (in /usr/lib/dyld)
+==35924==    by 0x100035C15: ImageLoader::recursiveLoadLibraries(ImageLoader::LinkContext const&, bool, ImageLoader::RPathChain const&, char const*) (in /usr/lib/dyld)
+==35924==    by 0x100035C15: ImageLoader::recursiveLoadLibraries(ImageLoader::LinkContext const&, bool, ImageLoader::RPathChain const&, char const*) (in /usr/lib/dyld)
+==35924== 
+==35924== HEAP SUMMARY:
+==35924==     in use at exit: 0 bytes in 0 blocks
+==35924==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==35924== 
+==35924== All heap blocks were freed -- no leaks are possible
+==35924== 
+==35924== For lists of detected and suppressed errors, rerun with: -s
+==35924== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 4 from 4)

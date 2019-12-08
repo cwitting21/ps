@@ -1,0 +1,28 @@
+==35995== Memcheck, a memory error detector
+==35995== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==35995== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==35995== Command: ./checker -9 -92 -85 -46 -98 -56 -10 -11 -75 -15 -31 -8 0 -2 -76 -21 -66 -60 -37 -17 -5 -91 -83 -86 -93 -97 -100 -78 -89 -73 -19 -77 -12 -43 -70 -23 -49 -3 -72 -7 -20 -48 -18 -87 -28 -74 -13 -68 -35 -52 -16 -50 -6 -45 -54 -44 -90 -59 -63 -84 -69 -88 -1 -58 -26 -40 -55 -99 -47 -95 -42 -51 -29 -57 -30 -65 -38 -53 -27 -61 -67 -41 -62 -14 -39 -71 -25 -34 -94 -96 -22 -81 -4 -36 -80 -33 -24 -32 -64 -82 -79
+==35995== 
+==35995== 
+==35995== Process terminating with default action of signal 2 (SIGINT)
+==35995==    at 0x25805895F: ???
+==35995==    by 0x10002E68E: dyld::loadPhase4(char const*, char const*, dyld::LoadContext const&, unsigned int&, std::__1::vector<char const*, std::__1::allocator<char const*> >*) (in /usr/lib/dyld)
+==35995==    by 0x10002E3FE: dyld::loadPhase3(char const*, char const*, dyld::LoadContext const&, unsigned int&, std::__1::vector<char const*, std::__1::allocator<char const*> >*) (in /usr/lib/dyld)
+==35995==    by 0x10002DB82: dyld::loadPhase1(char const*, char const*, dyld::LoadContext const&, unsigned int&, std::__1::vector<char const*, std::__1::allocator<char const*> >*) (in /usr/lib/dyld)
+==35995==    by 0x1000288FE: dyld::loadPhase0(char const*, char const*, dyld::LoadContext const&, unsigned int&, std::__1::vector<char const*, std::__1::allocator<char const*> >*) (in /usr/lib/dyld)
+==35995==    by 0x100028530: dyld::load(char const*, dyld::LoadContext const&, unsigned int&) (in /usr/lib/dyld)
+==35995==    by 0x10002EFEF: dyld::libraryLocator(char const*, bool, char const*, ImageLoader::RPathChain const*, unsigned int&) (in /usr/lib/dyld)
+==35995==    by 0x100035A45: ImageLoader::recursiveLoadLibraries(ImageLoader::LinkContext const&, bool, ImageLoader::RPathChain const&, char const*) (in /usr/lib/dyld)
+==35995==    by 0x100035C15: ImageLoader::recursiveLoadLibraries(ImageLoader::LinkContext const&, bool, ImageLoader::RPathChain const&, char const*) (in /usr/lib/dyld)
+==35995==    by 0x100035C15: ImageLoader::recursiveLoadLibraries(ImageLoader::LinkContext const&, bool, ImageLoader::RPathChain const&, char const*) (in /usr/lib/dyld)
+==35995==    by 0x100035C15: ImageLoader::recursiveLoadLibraries(ImageLoader::LinkContext const&, bool, ImageLoader::RPathChain const&, char const*) (in /usr/lib/dyld)
+==35995==    by 0x100035C15: ImageLoader::recursiveLoadLibraries(ImageLoader::LinkContext const&, bool, ImageLoader::RPathChain const&, char const*) (in /usr/lib/dyld)
+==35995== 
+==35995== HEAP SUMMARY:
+==35995==     in use at exit: 0 bytes in 0 blocks
+==35995==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==35995== 
+==35995== All heap blocks were freed -- no leaks are possible
+==35995== 
+==35995== For lists of detected and suppressed errors, rerun with: -s
+==35995== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 4 from 4)
