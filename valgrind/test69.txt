@@ -1,0 +1,894 @@
+==31581== Memcheck, a memory error detector
+==31581== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==31581== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==31581== Command: ./checker 231 -239 125 -113 -75 162 -106 25 227 -202 -112 -223 -39 158 37 -84 144 -111 -228 192 138 232 -224 -48 -122 -132 -155 153 -220 -161 -197 -188 167 -215 39 -66 101 56 -83 40 -243 59 -125 181 -10 88 -59 -205 -128 233 241 -41 -248 -108 -203 163 103 94 228 188 21 204 -56 210 121 -176 148 -45 13 -23 -29 22 99 -3 44 193 82 -60 85 -217 220 -70 -99 77 -127 212 62 -35 -49 31 -74 -164 244 190 -37 -207 -57 180 27 -27 30 -16 -154 -81 -5 217 177 -93 -116 173 -146 119 152 -140 -64 75 -11 -26 42 226 -95 140 70 84 243 -187 215 211 -198 0 174 154 102 -92 191 247 -54 132 200 -233 52 -38 240 -165 -245 131 -55 17 -200 216 155 -136 137 80 23 -129 114 67 12 -8 205 60 81 -244 139 -216 106 -159 168 -230 11 -212 184 51 122 109 230 29 112 49 159 -134 -234 161 -98 -149 104 -225 189 46 129 63 93 19 -124 -121 209 -97 -183 -135 16 -40 207 -178 10 -22 -24 -43 50 69 -231 -147 68 214 -1 74 -107 126 -137 -79 -157 72 -179 203 -181 -104 164 -246 -144 -166 116 113 249 -214 208 150 -87 -100 -88 134 -28 197 187 28 -103 -61 54 -208 196 -13 -184 61 -170 206 -115 234 -221 64 -171 242 48 -117 235 -130 238 14 -120 -229 -242 149 -80 -72 -141 -15 -36 160 120 222 165 -189 -145 36 -152 182 71 -218 -150 110 202 -222 -213 -33 130 -193 -109 175 107 221 172 -191 176 -50 -169 -69 15 -12 -119 26 41 248 179 -7 -30 -42 -219 66 -182 185 213 76 -102 -167 -9 -175 143 65 -105 -90 78 33 53 91 219 115 141 135 -101 239 166 -82 -131 38 -206 -177 246 136 151 105 9 -71 199 156 90 -151 118 -126 -172 -94 237 -44 8 -53 145 169 123 -91 83 -31 225 -142 -209 -85 92 -76 -204 -20 4 -241 45 -65 5 218 -210 34 201 -250 186 -201 18 229 -19 2 32 -58 -18 198 57 -247 -2 -153 -52 -118 -235 111 224 -162 -114 24 178 -174 -139 -226 194 95 -190 -46 -77 -51 58 -211 96 133 -236 7 250 98 -73 117 43 -168 -68 6 100 -62 -17 127 -196 -232 -185 146 124 -156 -199 97 -86 -6 -173 183 3 55 147 20 -238 1 -21 170 236 128 108 -249 157 -227 245 -158 -148 -163 -32 195 -237 -34 89 -186 -78 -143 -67 -133 35 -4 -160 -96 -89 -138 -14 -110 -47 -25 171 223 -63 -123 73 -194 -195 79 -192 142 87 47 86 -240 -180
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000552C: ft_strcmp (in ./checker)
+==31581==    by 0x100002E26: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88020 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D5B: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000555F: ft_strcmp (in ./checker)
+==31581==    by 0x100002E26: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88020 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D5B: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x1000055A3: ft_strcmp (in ./checker)
+==31581==    by 0x100002E26: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88021 is 1 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D5B: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000552C: ft_strcmp (in ./checker)
+==31581==    by 0x100002E72: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88020 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D5B: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000555F: ft_strcmp (in ./checker)
+==31581==    by 0x100002E72: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88020 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D5B: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x1000055A3: ft_strcmp (in ./checker)
+==31581==    by 0x100002E72: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88021 is 1 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D5B: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000552C: ft_strcmp (in ./checker)
+==31581==    by 0x100002EBE: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88020 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D5B: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000555F: ft_strcmp (in ./checker)
+==31581==    by 0x100002EBE: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88020 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D5B: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x1000055A3: ft_strcmp (in ./checker)
+==31581==    by 0x100002EBE: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88021 is 1 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D5B: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000552C: ft_strcmp (in ./checker)
+==31581==    by 0x100002F27: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88020 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D5B: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x1000055A3: ft_strcmp (in ./checker)
+==31581==    by 0x100002F27: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88020 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D5B: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000552C: ft_strcmp (in ./checker)
+==31581==    by 0x100002F40: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88020 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D5B: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x1000055A3: ft_strcmp (in ./checker)
+==31581==    by 0x100002F40: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88020 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D5B: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000552C: ft_strcmp (in ./checker)
+==31581==    by 0x100002F59: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88020 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D5B: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x1000055A3: ft_strcmp (in ./checker)
+==31581==    by 0x100002F59: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88020 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D5B: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000552C: ft_strcmp (in ./checker)
+==31581==    by 0x100002F72: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88020 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D5B: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x1000055A3: ft_strcmp (in ./checker)
+==31581==    by 0x100002F72: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88020 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D5B: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000552C: ft_strcmp (in ./checker)
+==31581==    by 0x100002F8B: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88020 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D5B: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x1000055A3: ft_strcmp (in ./checker)
+==31581==    by 0x100002F8B: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88020 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D5B: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000552C: ft_strcmp (in ./checker)
+==31581==    by 0x100002FA4: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88020 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D5B: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000555F: ft_strcmp (in ./checker)
+==31581==    by 0x100002FA4: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88020 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D5B: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x1000055A3: ft_strcmp (in ./checker)
+==31581==    by 0x100002FA4: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88022 is 2 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D5B: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000555F: ft_strcmp (in ./checker)
+==31581==    by 0x100002F72: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88070 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D28: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x1000022A3: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000555F: ft_strcmp (in ./checker)
+==31581==    by 0x100002F8B: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b88070 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002D28: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x1000022A3: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000552C: ft_strcmp (in ./checker)
+==31581==    by 0x100002FBD: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b880c0 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002DA7: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x1000022A3: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000555F: ft_strcmp (in ./checker)
+==31581==    by 0x100002FBD: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b880c0 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002DA7: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x1000022A3: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x1000055A3: ft_strcmp (in ./checker)
+==31581==    by 0x100002FBD: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b880c2 is 2 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002DA7: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x1000022A3: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000552C: ft_strcmp (in ./checker)
+==31581==    by 0x100002D06: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b9cb40 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002C24: case_1_local (in ./checker)
+==31581==    by 0x100002B25: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x1000055A3: ft_strcmp (in ./checker)
+==31581==    by 0x100002D06: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b9cb40 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002C24: case_1_local (in ./checker)
+==31581==    by 0x100002B25: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000552C: ft_strcmp (in ./checker)
+==31581==    by 0x100002D3D: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b9cb40 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002C24: case_1_local (in ./checker)
+==31581==    by 0x100002B25: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x1000055A3: ft_strcmp (in ./checker)
+==31581==    by 0x100002D3D: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b9cb40 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002C24: case_1_local (in ./checker)
+==31581==    by 0x100002B25: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000552C: ft_strcmp (in ./checker)
+==31581==    by 0x100002D70: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b9cb40 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002C24: case_1_local (in ./checker)
+==31581==    by 0x100002B25: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x1000055A3: ft_strcmp (in ./checker)
+==31581==    by 0x100002D70: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b9cb40 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002C24: case_1_local (in ./checker)
+==31581==    by 0x100002B25: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000552C: ft_strcmp (in ./checker)
+==31581==    by 0x100002DBC: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b9cb40 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002C24: case_1_local (in ./checker)
+==31581==    by 0x100002B25: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x1000055A3: ft_strcmp (in ./checker)
+==31581==    by 0x100002DBC: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b9cb40 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002C24: case_1_local (in ./checker)
+==31581==    by 0x100002B25: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000555F: ft_strcmp (in ./checker)
+==31581==    by 0x100002F27: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b9cb40 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002C24: case_1_local (in ./checker)
+==31581==    by 0x100002B25: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000555F: ft_strcmp (in ./checker)
+==31581==    by 0x100002D06: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b9cbe0 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002CC5: case_1_local (in ./checker)
+==31581==    by 0x100002B25: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x1000022A3: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000552C: ft_strcmp (in ./checker)
+==31581==    by 0x100002FD6: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b9e8d0 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002DDE: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x10000555F: ft_strcmp (in ./checker)
+==31581==    by 0x100002FD6: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b9e8d0 is 0 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002DDE: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== Invalid read of size 1
+==31581==    at 0x1000055A3: ft_strcmp (in ./checker)
+==31581==    by 0x100002FD6: case_3_local (in ./checker)
+==31581==    by 0x100002B47: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Address 0x100b9e8d2 is 2 bytes inside a block of size 3 free'd
+==31581==    at 0x1000BBA03: free (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x1000053D8: ft_memdel (in ./checker)
+==31581==    by 0x1000055DD: ft_strdel (in ./checker)
+==31581==    by 0x100002DDE: case_2_local (in ./checker)
+==31581==    by 0x100002B36: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581==  Block was alloc'd at
+==31581==    at 0x1000BB626: malloc (in /Users/cwitting/.brew/Cellar/valgrind/3.15.0/lib/valgrind/vgpreload_memcheck-amd64-darwin.so)
+==31581==    by 0x10000564C: ft_strnew (in ./checker)
+==31581==    by 0x1000056BE: ft_strsub (in ./checker)
+==31581==    by 0x1000023D0: getline (in ./checker)
+==31581==    by 0x100002645: ft_read (in ./checker)
+==31581==    by 0x100002375: get_next_line (in ./checker)
+==31581==    by 0x100002B08: read_commands (in ./checker)
+==31581==    by 0x10000112F: main (in ./checker)
+==31581== 
+==31581== 
+==31581== HEAP SUMMARY:
+==31581==     in use at exit: 18,077 bytes in 159 blocks
+==31581==   total heap usage: 5,792 allocs, 5,633 frees, 64,639 bytes allocated
+==31581== 
+==31581== LEAK SUMMARY:
+==31581==    definitely lost: 0 bytes in 0 blocks
+==31581==    indirectly lost: 0 bytes in 0 blocks
+==31581==      possibly lost: 72 bytes in 3 blocks
+==31581==    still reachable: 269 bytes in 7 blocks
+==31581==         suppressed: 17,736 bytes in 149 blocks
+==31581== Rerun with --leak-check=full to see details of leaked memory
+==31581== 
+==31581== For lists of detected and suppressed errors, rerun with: -s
+==31581== ERROR SUMMARY: 100608 errors from 40 contexts (suppressed: 4 from 4)
