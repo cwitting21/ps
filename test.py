@@ -17,7 +17,7 @@ import shutil
 
 shutil.rmtree("./valgrind", ignore_errors=True)
 os.mkdir("./valgrind")
-caunter = int(sys.argv[1])
-while caunter :
-    os.system("ARG=\"$(ruby -e \"puts (" + sys.argv[2] + " .. " + sys.argv[3] + ").to_a.shuffle.join(\' \')\")\"; ./push_swap $ARG | valgrind ./checker $ARG 2> ./valgrind/test" + str(caunter) + ".txt")
-    caunter -= 1
+count = int(sys.argv[1])
+while count :
+    os.system("ARG=\"$(ruby -e \"puts (" + sys.argv[2] + " .. " + sys.argv[3] + ").to_a.shuffle.join(\' \')\")\"; ./push_swap $ARG | valgrind ./checker $ARG 2> ./valgrind/test" + str(count) + ".txt")
+    count -= 1
